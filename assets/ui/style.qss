@@ -1,0 +1,140 @@
+/* ===== ForensicVault Final Dark Theme (style.qss) ===== */
+
+/* =======================================================
+   BASE WIDGETS
+   ======================================================= */
+QMainWindow, QWidget {
+    background-color: #0f1115;
+    color: #e8e8e8;
+    font-family: Consolas, monospace;
+    font-size: 11pt;
+}
+
+QLabel {
+    color: #c9d1d9;
+}
+
+/* =======================================================
+   INPUTS & BUTTONS
+   ======================================================= */
+QPushButton {
+    background-color: #1f2328;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #2d333b;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    color: #e6edf3;
+    selection-background-color: #347d39; /* Green selection */
+}
+
+/* =======================================================
+   TAB WIDGETS
+   ======================================================= */
+QTabWidget::pane {
+    border: 1px solid #30363d;
+}
+
+QTabBar::tab {
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 6px 12px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #1f2328;
+    color: #ffffff;
+}
+
+/* =======================================================
+   TABLES & HEADERS (Custody Chain Fixes)
+   ======================================================= */
+QTableWidget {
+    background-color: #0f1115;      /* Main table background color */
+    gridline-color: #30363d;        /* Dark grid lines */
+    alternate-background-color: #161b22; /* Optional zebra-striping */
+}
+
+QTableWidget::item:selected {
+    background-color: #005cc5; /* Blue selection color */
+    color: #ffffff;
+}
+
+QHeaderView::section {
+    /* Style for both horizontal (column names) AND vertical (row numbers) headers */
+    background-color: #333333; /* Dark grey background for headers */
+    color: #FFFFFF;            /* White text color for headers */
+    padding: 4px;
+    border: 1px solid #555555;
+}
+
+/* FIX: Targets the persistent top-left corner button */
+QTableCornerButton::section {
+    background-color: #333333; /* Use the same dark color as the headers */
+}
+
+/* =======================================================
+   COMBO BOX (For Template Selector)
+   ======================================================= */
+QComboBox {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: #30363d;
+    border-left-style: solid; 
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #30363d;
+    selection-background-color: #347d39; /* Same as text selection */
+    background-color: #161b22; /* Dark background for dropdown list */
+}
+
+/* =======================================================
+   SCROLLBAR
+   ======================================================= */
+QScrollBar:vertical {
+    border: none;
+    background: #0f1115;
+    width: 10px;
+    margin: 15px 0 15px 0;
+}
+QScrollBar::handle:vertical {
+    background: #444c56;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #586069;
+}
+
+/* =======================================================
+   STATUS BAR
+   ======================================================= */
+QStatusBar {
+    background-color: #1f2328;
+    color: #c9d1d9;
+    border-top: 1px solid #30363d;
+}
